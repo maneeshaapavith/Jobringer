@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Jobringer</title>
+</head>
+
+<body>
+	<header>
+		<div class="py-3 mx-3 text-bg-light border-bottom">
+			<div class="">
+				<div class="d-flex flex-wrap justify-content-lg-start">
+
+					<div class="col-auto p-0 m-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list d-lg-none" viewBox="0 0 20 10">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					  </svg></div>
+
+					<a href="/"
+						class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+						<img src="images\Logo.png" height="50px" alt="">
+					</a>
+
+					<ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small d-none d-lg-flex">
+						<li class="me-3">
+							<a href="#" class="nav-link text-secondary rounded-pill border border-secondary">
+								Create Alert
+							</a>
+						</li>
+						<li class="me-3">
+							<a href="#" class="nav-link text-secondary rounded-pill border border-secondary">
+								Jobs
+							</a>
+						</li>
+						<li>
+							<a href="#" class="nav-link text-secondary rounded-pill border border-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-person-circle" viewBox="0 0 20 20">
+									<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+									<path fill-rule="evenodd"
+										d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+								</svg>
+								Profile
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="px-3 py-2 text-bg-dark col">
+			<div class="d-flex flex-wrap flex-fill">
+
+				<form class="col-6 mb-2 mb-lg-0 me-1" role="search">
+					<input type="search" class="form-control" placeholder="Search job..." aria-label="Search">
+				</form>
+
+				<span
+					class="col-3 mb-2 mb-lg-0 mx-1 input-group-text justify-content-center d-lg-none align-self-stretch"
+					role="button" aria-expanded="false" aria-controls="collapse1 collapse2 collapse3" data-bs-toggle="collapse"
+					data-bs-target=".multi-collapse">
+					More
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+						class="bi bi-search pt-1">
+						<path
+							d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+					</svg>
+				</span>
+
+				<div class="col-2 me-1 collapse d-lg-none">
+					<input class="form-control" id="exampleFormControlInput1" placeholder="Location">
+				</div>
+
+				<span class="col-2 col-lg-auto mb-2 mb-lg-0 me-1 input-group-text d-lg-none">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+						class="bi bi-search">
+						<path
+							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+					</svg>
+				</span>
+
+				<div class="col-3 me-1 d-lg-none collapse multi-collapse" id="collapse1">
+					<input class="form-control" id="exampleFormControlInput1" placeholder="Location">
+				</div>
+
+				<select class="form-select col-2 me-1 text-secondary collapse multi-collapse d-lg-none" style="width: auto;"
+					id="collapseExample" aria-label="Default select example" id="collapse2">
+					<option selected>Select Experience</option>
+					<option value="1">1 year</option>
+					<option value="2">2 years</option>
+					<option value="3">3 years</option>
+					<option value="4">4 years</option>
+					<option value="5">5 years</option>
+					<option value="6">6 years</option>
+					<option value="7">7 years</option>
+					<option value="8">8 years</option>
+					<option value="9">9 years</option>
+					<option value="10">10 years</option>
+					<option value="11-15">11-15 years</option>
+					<option value="16-20">16-20 years</option>
+					<option value="21-25">21-25 years</option>
+					<option value="26-30">26-30 years</option>
+					<option value="31-40">31-40 years</option>
+					<option value="41-50">41-50 years</option>
+				</select>
+				<select class="form-select col-2 me-1 text-secondary collapse multi-collapse d-lg-none" style="width: auto;"
+					aria-label="Default select example" id="collapse3">
+					<option selected>Select Salary</option>
+					<option value="0-3">0-3 Lakhs</option>
+					<option value="3-6">3-6 Lakhs</option>
+					<option value="6-10">6-10 Lakhs</option>
+					<option value="10-15">10-15 Lakhs</option>
+					<option value="15-25">15-25 Lakhs</option>
+					<option value="25-50">25-50 Lakhs</option>
+					<option value="50-100">50-100 Lakhs</option>
+					<option value="1Cr+">1Cr+ </option>
+				</select>
+
+				<div class="col-2 me-1 d-none d-lg-block">
+					<input class="form-control" id="exampleFormControlInput1" placeholder="Location">
+				</div>
+				<select class="form-select col-2 me-1 text-secondary d-none d-lg-block" style="width: auto;"
+					aria-label="Default select example">
+					<option selected>Select Experience</option>
+					<option value="1">1 year</option>
+					<option value="2">2 years</option>
+					<option value="3">3 years</option>
+					<option value="4">4 years</option>
+					<option value="5">5 years</option>
+					<option value="6">6 years</option>
+					<option value="7">7 years</option>
+					<option value="8">8 years</option>
+					<option value="9">9 years</option>
+					<option value="10">10 years</option>
+					<option value="11-15">11-15 years</option>
+					<option value="16-20">16-20 years</option>
+					<option value="21-25">21-25 years</option>
+					<option value="26-30">26-30 years</option>
+					<option value="31-40">31-40 years</option>
+					<option value="41-50">41-50 years</option>
+				</select>
+				<select class="form-select col-2 me-1 text-secondary d-none d-lg-block" style="width: auto;"
+					aria-label="Default select example">
+					<option selected>Select Salary</option>
+					<option value="0-3">0-3 Lakhs</option>
+					<option value="3-6">3-6 Lakhs</option>
+					<option value="6-10">6-10 Lakhs</option>
+					<option value="10-15">10-15 Lakhs</option>
+					<option value="15-25">15-25 Lakhs</option>
+					<option value="25-50">25-50 Lakhs</option>
+					<option value="50-100">50-100 Lakhs</option>
+					<option value="1Cr+">1Cr+ </option>
+				</select>
+				<span class="col-2 col-lg-auto mb-2 mb-lg-0 me-1 input-group-text d-none d-lg-block">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+						class="bi bi-search">
+						<path
+							d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+					</svg>
+				</span>
+			</div>
+		</div>
+	</header>
+
+	<div class="">
+		<div class="row m-0">
+
+			<div class="offcanvas offcanvas-start p-0 m-0" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+				<div class="col-lg-3 m-0 bg-dark align-self-stretch p-3">
+					<div class="bg-dark p-3">
+						<div class="text-white-50 fs-5 mx-2 mb-3">Filters</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1">
+								<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+										class="bi bi-search">
+										<path
+											d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+									</svg></span>
+							</span>
+							<select class="form-select" aria-label="Default select example">
+								<option selected>Keywords, Skills</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-person-lines-fill">
+									<path
+										d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+								</svg>
+							</span>
+							<select class="form-select" aria-label="Default select example">
+								<option selected>Work Category</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop">
+									<path
+										d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+								</svg>
+							</span>
+							<select class="form-select" aria-label="Default select example">
+								<option selected>Work Mode</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+						<div class="text-white-50 fs-4 p-2">Jobs in India</div>
+						<div class="text-white">
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Chennai
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Delhi
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Mumbai
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Pune
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Hyderabad
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Kolkata
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Indore
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Gurugram
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Jaipur
+								</a>
+							</div>
+							<div class="">
+								<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+									<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+										fill="currentColor" class="bi bi-caret-right-square-fill">
+										<path
+											d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+									</svg>
+									Ahmedabad
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg-dark-subtle mb-3">
+					<div class="card-body ps-4">
+						<div class="col-md-10">
+							<h5 class="card-title ps-3 pt-3">Recommended Jobs</h5>
+						</div>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Business Insights Architect
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Program Manager
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Data Analyst
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Full Stack Developer
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								AI Specialist
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								UX Developer
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Cloud Specialist
+							</h6>
+						</span>
+
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-lg-3 m-0 bg-dark align-self-stretch p-3 d-none d-xl-block">
+				<div class="bg-dark p-3">
+					<div class="text-white-50 fs-5 mx-2 mb-3">Filters</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">
+							<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-search">
+									<path
+										d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+								</svg></span>
+						</span>
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Keywords, Skills</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+								class="bi bi-person-lines-fill">
+								<path
+									d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+							</svg>
+						</span>
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Work Category</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+								class="bi bi-laptop">
+								<path
+									d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+							</svg>
+						</span>
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Work Mode</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="text-white-50 fs-4 p-2">Jobs in India</div>
+					<div class="text-white">
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Chennai
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Delhi
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Mumbai
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Pune
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Hyderabad
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Kolkata
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Indore
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Gurugram
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Jaipur
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="link-light link-offset-2 link-underline-opacity-0">
+								<svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+									fill="currentColor" class="bi bi-caret-right-square-fill">
+									<path
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z" />
+								</svg>
+								Ahmedabad
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 m-0 p-3">
+				<div class="card bg-dark-subtle mb-3 rounded-4">
+					<div class="card-body ps-4">
+						<div class="row g-0 ms-2">
+							<div class="col-md-1"><img
+									src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/toyota-logo.png"
+									class="img-fluid rounded-2 mt-3 mb-2" width="80px" alt=""> </div>
+							<div class="col-md-10">
+								<h5 class="card-title ps-3 pt-4">Logistics</h5>
+							</div>
+							<div class="col-md-1 text-end pt-4"> 4.3 ⭐ </div>
+						</div>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-3 me-1">
+									<path
+										d="M2.5 2A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+								</svg>
+								Web - Graphic Design
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-briefcase-fill my-2 ms-3 me-1">
+									<path
+										d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+									<path
+										d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+								</svg>
+								0 - 5 Years
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-3 me-1">
+									<path
+										d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+								</svg>
+								3 - 7 Lakhs
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-5 me-1">
+									<path
+										d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+								</svg>
+								Chennai / Bangalore
+								<span class="mx-3"></span>
+								<button
+									class="bg-primary border-0 rounded-3 ms-5 px-4 py-2 mb-2 text-white">Apply</button>
+								<button class="bg-primary border-0 rounded-3 ms-1 px-4 py-2 text-white">
+									Save Job
+								</button>
+							</h6>
+
+						</span>
+
+					</div>
+
+
+				</div>
+
+				<div class="card bg-dark-subtle mb-3 rounded-4">
+					<div class="card-body ps-4">
+						<div class="row g-0 ms-2">
+							<div class="col-md-1"><img
+									src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/intel-logo.png"
+									class="img-fluid rounded-2 mt-3 mb-2" width="80px" alt=""> </div>
+							<div class="col-md-10">
+								<h5 class="card-title ps-3 pt-4">Creative Design</h5>
+							</div>
+							<div class="col-md-1 text-end pt-4"> 3.9 ⭐ </div>
+						</div>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-3 me-1">
+									<path
+										d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z" />
+								</svg>
+								UI / UX Design
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-briefcase-fill my-2 ms-3 me-1">
+									<path
+										d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+									<path
+										d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+								</svg>
+								1 - 4 Years
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-3 me-1">
+									<path
+										d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+								</svg>
+								4 - 8 Lakhs
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-5 me-1">
+									<path
+										d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+								</svg>
+								Chennai / Coimbatore
+								<span class="mx-3"></span>
+								<button
+									class="bg-primary border-0 rounded-3 ms-5 px-4 py-2 mb-2 text-white">Apply</button>
+								<button class="bg-primary border-0 rounded-3 ms-1 px-4 py-2 text-white">
+									Save Job
+								</button>
+							</h6>
+
+						</span>
+
+					</div>
+
+
+				</div>
+
+				<div class="card bg-dark-subtle mb-3 rounded-4">
+					<div class="card-body ps-4">
+						<div class="row g-0 ms-2">
+							<div class="col-md-1"><img
+									src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/ibm-logo.png"
+									class="img-fluid rounded-2 mt-3 mb-2" width="80px" alt=""> </div>
+							<div class="col-md-10">
+								<h5 class="card-title ps-3 pt-4">Digi tech</h5>
+							</div>
+							<div class="col-md-1 text-end pt-4"> 3.1 ⭐ </div>
+						</div>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-3 me-1">
+									<path
+										d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
+								</svg>
+								Business Insights Architect
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-briefcase-fill my-2 ms-3 me-1">
+									<path
+										d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+									<path
+										d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+								</svg>
+								3 - 8 Years
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-3 me-1">
+									<path
+										d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+								</svg>
+								6 - 10 Lakhs
+
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-2 ms-5 me-1">
+									<path
+										d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+								</svg>
+								Delhi / Mumbai
+								<span class="mx-3"></span>
+								<button
+									class="bg-primary border-0 rounded-3 ms-5 px-4 py-2 mb-2 text-white">Apply</button>
+								<button class="bg-primary border-0 rounded-3 ms-1 px-4 py-2 text-white">
+									Save Job
+								</button>
+							</h6>
+
+						</span>
+
+					</div>
+
+
+				</div>
+
+
+
+			</div>
+
+			<div class="col-lg-3 m-0 align-self-start pt-3">
+				<div class="card bg-dark-subtle mb-3 rounded-4">
+					<div class="card-body ps-4">
+						<div class="col-md-10">
+							<h5 class="card-title ps-3 pt-3">Recommended Jobs</h5>
+						</div>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Business Insights Architect
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Program Manager
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Data Analyst
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Full Stack Developer
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								AI Specialist
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								UX Developer
+							</h6>
+						</span>
+
+						<span>
+							<h6 class="card-text ms-3 text-body-secondary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+									class="bi bi-laptop-fill my-1 me-1">
+									<path fill-rule="evenodd"
+										d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+								</svg>
+								Cloud Specialist
+							</h6>
+						</span>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="bg-dark text-center text-lg-start">
+
+		<div class="text-center text-light p-3">
+			© 2023 Copyright:
+			<a class="text-light" href="/">JobRinger.com</a>
+		</div>
+
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
